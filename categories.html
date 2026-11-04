@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Categories | RIKA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .page-heading {
+            text-align: center;
+            padding: 85px 20px 55px;
+            background: #faf9f6;
+        }
+
+        .page-heading h1 {
+            font-size: clamp(40px, 5vw, 58px);
+            margin-bottom: 15px;
+        }
+
+        .page-heading p:last-child {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .shop-categories {
+            padding: 65px 8% 100px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .shop-category {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            background: #faf9f6;
+        }
+
+        .shop-category img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .shop-category:hover img {
+            transform: scale(1.05);
+        }
+
+        .shop-category-info {
+            padding: 22px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shop-category-info h2 {
+            font-size: 27px;
+        }
+
+        .shop-category-info span {
+            color: #b89b68;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .shop-categories {
+                grid-template-columns: 1fr;
+                padding: 40px 6% 70px;
+                gap: 20px;
+            }
+
+            .shop-category img {
+                height: 330px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        ✨ Discover your everyday elegance
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="logo">RIKA<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="categories.html" class="active">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-heading reveal">
+            <p class="eyebrow">THE RIKA COLLECTION</p>
+            <h1>Find your <em>favourite.</em></h1>
+            <p>Explore our jewellery, one beautiful detail at a time.</p>
+        </section>
+
+        <section class="shop-categories">
+
+            <a href="rings.html" class="shop-category reveal">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=900" alt="Rings collection">
+                <div class="shop-category-info">
+                    <h2>Rings</h2>
+                    <span>Explore collection →</span>
+                </div>
+            </a>
+
+            <a href="bracelets.html" class="shop-category reveal">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=900" alt="Bracelets collection">
+                <div class="shop-category-info">
+                    <h2>Bracelets</h2>
+                    <span>Explore collection →</span>
+                </div>
+            </a>
+
+            <a href="earrings.html" class="shop-category reveal">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=900" alt="Earrings collection">
+                <div class="shop-category-info">
+                    <h2>Earrings</h2>
+                    <span>Explore collection →</span>
+                </div>
+            </a>
+
+            <a href="necklaces.html" class="shop-category reveal">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=900" alt="Necklaces collection">
+                <div class="shop-category-info">
+                    <h2>Necklaces</h2>
+                    <span>Explore collection →</span>
+                </div>
+            </a>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">RIKA<span>.</span></a>
+        <p>Elegance is in the little things.</p>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+        <p class="copyright">© 2026 RIKA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

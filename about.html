@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RIKA</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .about-hero {
+            text-align: center;
+            padding: 85px 20px;
+            background: #faf9f6;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(42px, 5vw, 60px);
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 90px 25px;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 22px;
+        }
+
+        .about-content p {
+            color: #777;
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .about-values {
+            background: #faf9f6;
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            padding: 30px 20px;
+            background: white;
+        }
+
+        .value-card h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #777;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 650px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        ✨ Discover your everyday elegance
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="logo">RIKA<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Shop</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero reveal">
+            <p class="eyebrow">GET TO KNOW US</p>
+            <h1>The story of <em>RIKA.</em></h1>
+        </section>
+
+        <section class="about-content reveal">
+            <p class="eyebrow">WELCOME TO RIKA</p>
+            <h2>Beauty in every little detail.</h2>
+
+            <p>
+                RIKA is a jewellery collection created for those
+                who appreciate simple elegance and beautiful details.
+                We bring together rings, bracelets, earrings and
+                necklaces to complement different styles and moments.
+            </p>
+
+            <p>
+                From everyday looks to special occasions, our aim
+                is to help you discover jewellery that feels right
+                for your own personal style.
+            </p>
+
+            <p>
+                Thank you for exploring RIKA and being a part
+                of our journey.
+            </p>
+        </section>
+
+        <section class="about-values">
+            <p class="eyebrow">WHAT MAKES RIKA</p>
+            <h2>Our little promises</h2>
+
+            <div class="values-grid">
+
+                <div class="value-card reveal">
+                    <h3>Simple Elegance</h3>
+                    <p>
+                        Jewellery designs that bring a graceful
+                        touch to your everyday style.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <h3>Personal Style</h3>
+                    <p>
+                        A collection of different designs
+                        for different preferences.
+                    </p>
+                </div>
+
+                <div class="value-card reveal">
+                    <h3>Customer Care</h3>
+                    <p>
+                        We welcome your questions and
+                        product enquiries.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">RIKA<span>.</span></a>
+        <p>Elegance is in the little things.</p>
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+
+        <p class="copyright">© 2026 RIKA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

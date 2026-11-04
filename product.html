@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | RIKA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .product-page {
+            padding: 65px 8% 100px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 35px;
+        }
+
+        .back-link:hover {
+            color: #b89b68;
+        }
+
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .detail-image {
+            width: 100%;
+            height: 520px;
+            object-fit: contain;
+            background: #faf9f6;
+        }
+
+        .detail-info {
+            padding-top: 25px;
+        }
+
+        .detail-category {
+            color: #b89b68;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .detail-info h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .detail-price {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .detail-description {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .detail-divider {
+            border: none;
+            border-top: 1px solid #eeeeee;
+            margin: 25px 0;
+        }
+
+        .detail-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .detail-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 13px 0;
+            border-bottom: 1px solid #eeeeee;
+            font-size: 13px;
+        }
+
+        .detail-list span:first-child {
+            color: #888;
+        }
+
+        .detail-list span:last-child {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 17px 22px;
+            background: #222;
+            color: white;
+            font-size: 13px;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #b89b68;
+            transform: translateY(-3px);
+        }
+
+        .note {
+            color: #999;
+            font-size: 11px;
+            margin-top: 15px;
+            line-height: 1.7;
+        }
+
+        .not-found {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        @media (max-width: 700px) {
+            .product-page {
+                padding: 40px 6% 70px;
+            }
+
+            .product-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .detail-image {
+                height: 380px;
+            }
+
+            .detail-info {
+                padding-top: 5px;
+            }
+
+            .detail-info h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="announcement">
+        ✨ Discover your everyday elegance
+    </div>
+
+    <header class="header">
+        <a href="index.html" class="logo">RIKA<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="categories.html" class="active">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="product-page">
+
+        <a href="categories.html" class="back-link">
+            ← Back to collections
+        </a>
+
+        <section id="product-container"></section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">RIKA<span>.</span></a>
+        <p>Elegance is in the little things.</p>
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQs</a>
+        </div>
+
+        <p class="copyright">© 2026 RIKA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const products = {
+            "ring-1": {
+                name: "Golden Engraved Band",
+                category: "Ring",
+                price: 220,
+                image: "images/rings/ring-1.jpeg",
+                description: "A golden-toned band designed to add an elegant touch to your everyday style."
+            },
+            "ring-2": {
+                name: "Floral Sparkle Ring",
+                category: "Ring",
+                price: 220,
+                image: "images/rings/ring-2.jpeg",
+                description: "A floral-inspired design that brings a delicate touch to your jewellery collection."
+            },
+            "ring-3": {
+                name: "Classic Solitaire",
+                category: "Ring",
+                price: 220,
+                image: "images/rings/ring-3.jpeg",
+                description: "A classic-inspired design for a simple and elegant look."
+            },
+            "ring-4": {
+                name: "Minimal Solitaire",
+                category: "Ring",
+                price: 220,
+                image: "images/rings/ring-4.jpeg",
+                description: "A minimal design that complements both everyday and special outfits."
+            },
+
+            "bracelet-1": {
+                name: "Golden Charm Bracelet Set",
+                category: "Bracelet",
+                price: 189,
+                image: "images/bracelets/bracelet-1.jpeg",
+                description: "A golden-toned bracelet design to add a stylish detail to your look."
+            },
+            "bracelet-2": {
+                name: "Black Stone Link Bracelet",
+                category: "Bracelet",
+                price: 189,
+                image: "images/bracelets/bracelet-2.jpeg",
+                description: "A distinctive link-style design for a stylish jewellery collection."
+            },
+            "bracelet-3": {
+                name: "Crystal Shine Bracelet",
+                category: "Bracelet",
+                price: 189,
+                image: "images/bracelets/bracelet-3.jpeg",
+                description: "A delicate design with a sparkling-inspired look."
+            },
+            "bracelet-4": {
+                name: "Golden Crystal Chain Bracelet",
+                category: "Bracelet",
+                price: 189,
+                image: "images/bracelets/bracelet-4.jpeg",
+                description: "A golden-toned chain design for an elegant finishing touch."
+            },
+
+            "earring-1": {
+                name: "Blue Blossom Earrings",
+                category: "Earrings",
+                price: 169,
+                image: "images/earrings/earring-1.jpeg",
+                description: "A floral-inspired earring design that adds a charming detail to your style."
+            },
+            "earring-2": {
+                name: "Golden Crystal Drops",
+                category: "Earrings",
+                price: 169,
+                image: "images/earrings/earring-2.jpeg",
+                description: "A golden-toned drop design for an elegant finishing touch."
+            },
+            "earring-3": {
+                name: "Twisted Sparkle Earrings",
+                category: "Earrings",
+                price: 169,
+                image: "images/earrings/earring-3.jpeg",
+                description: "A stylish twisted design for a little extra detail."
+            },
+            "earring-4": {
+                name: "Golden Floral Studs",
+                category: "Earrings",
+                price: 169,
+                image: "images/earrings/earring-4.jpeg",
+                description: "A floral-inspired stud design for a graceful look."
+            },
+
+            "necklace-1": {
+                name: "Golden Solitaire Pendant",
+                category: "Necklace",
+                price: 380,
+                image: "images/necklaces/necklace-1.jpeg",
+                description: "A golden-toned pendant necklace designed for a timeless look."
+            },
+            "necklace-2": {
+                name: "Infinity Love Necklace",
+                category: "Necklace",
+                price: 380,
+                image: "images/necklaces/necklace-2.jpeg",
+                description: "An infinity-inspired design that adds a meaningful detail to your style."
+            },
+            "necklace-3": {
+                name: "Golden Phoenix Necklace",
+                category: "Necklace",
+                price: 380,
+                image: "images/necklaces/necklace-3.jpeg",
+                description: "A distinctive golden-toned necklace design for your collection."
+            },
+            "necklace-4": {
+                name: "Moonlight Charm Necklace",
+                category: "Necklace",
+                price: 380,
+                image: "images/necklaces/necklace-4.jpeg",
+                description: "A delicate charm-inspired design with a graceful golden finish."
+            }
+        };
+
+        // Replace this with the shop's real WhatsApp number.
+        // Use country code 91 followed by the 10-digit number.
+        const whatsappNumber = "91XXXXXXXXXX";
+
+        const productId = new URLSearchParams(
+            window.location.search
+        ).get("id");
+
+        const product = products[productId];
+        const container = document.getElementById("product-container");
+
+        if (product) {
+            document.title = product.name + " | RIKA";
+
+            container.innerHTML = `
+                <div class="product-layout">
+                    <div>
+                        <img
+                            class="detail-image"
+                            src="${product.image}"
+                            alt="${product.name}"
+                        >
+                    </div>
+
+                    <div class="detail-info">
+                        <p class="detail-category">${product.category}</p>
+
+                        <h1>${product.name}</h1>
+
+                        <p class="detail-price">₹${product.price}</p>
+
+                        <p class="detail-description">
+                            ${product.description}
+                        </p>
+
+                        <hr class="detail-divider">
+
+                        <ul class="detail-list">
+                            <li>
+                                <span>Material</span>
+                                <span>Stainless Steel</span>
+                            </li>
+                            <li>
+                                <span>Colour</span>
+                                <span>Golden</span>
+                            </li>
+                            <li>
+                                <span>Category</span>
+                                <span>${product.category}</span>
+                            </li>
+                            <li>
+                                <span>Price</span>
+                                <span>₹${product.price}</span>
+                            </li>
+                        </ul>
+
+                        <a
+                            id="whatsapp-link"
+                            class="whatsapp-btn"
+                            href="#"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            Enquire on WhatsApp →
+                        </a>
+
+                        <p class="note">
+                            Contact us on WhatsApp for product enquiries
+                            and availability.
+                        </p>
+                    </div>
+                </div>
+            `;
+
+            const message = `Hello RIKA! I am interested in ${product.name} (${product.category}), priced at ₹${product.price}. Is it available?`;
+
+            document.getElementById("whatsapp-link").href =
+                `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        } else {
+            container.innerHTML = `
+                <div class="not-found">
+                    <h1>Product not found</h1>
+                    <p>Please return to our collection and choose a product.</p>
+                    <br>
+                    <a href="categories.html" class="primary-btn">
+                        Explore Collection →
+                    </a>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>

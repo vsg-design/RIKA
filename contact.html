@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RIKA</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-section {
+            max-width: 850px;
+            margin: 70px auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .contact-section h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .contact-section > p {
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .contact-card {
+            padding: 28px 18px;
+            border: 1px solid #eee;
+            background: #fff;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .contact-card p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .contact-button:hover {
+            background: #b89b65;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">RIKA.</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-section">
+        <p>WE WOULD LOVE TO HEAR FROM YOU</p>
+        <h1>Contact Us</h1>
+
+        <p>
+            Have a question about our jewellery?
+            Get in touch with us. We would be happy to help.
+        </p>
+
+        <div class="contact-details">
+
+            <div class="contact-card">
+                <h3>Owner</h3>
+                <p>Pranit</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Our Location</h3>
+                <p>Ganpati Chowk, Delhi</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Customer Support</h3>
+                <p>Contact us through WhatsApp for enquiries.</p>
+            </div>
+
+        </div>
+
+        <a href="#" class="contact-button" id="contact-whatsapp">
+            Chat on WhatsApp
+        </a>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 RIKA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const whatsappNumber = "91XXXXXXXXXX";
+
+        document.getElementById("contact-whatsapp").href =
+            "https://wa.me/" + whatsappNumber;
+    </script>
+
+</body>
+</html>
